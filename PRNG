@@ -1,0 +1,21 @@
+import random
+
+def get_num(range):
+   temp_string=("what would be your " + range + " random number? ")
+   return int(input(temp_string))
+
+def get_user_input():
+    amount = int(input("how many random numbers would you like?"))
+    low_range = get_num("lowest")
+    high_range = get_num("highest")
+    return amount, low_range, high_range
+
+def num_gen(amount, low_range, high_range):
+    for i in range(amount):
+        print(random.randint(low_range,high_range))
+
+def main():
+    x, y, z = get_user_input()
+    num_gen(x,y,z)
+
+main()
